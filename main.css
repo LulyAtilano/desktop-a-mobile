@@ -1,66 +1,63 @@
-/* Estilo css para buscar resolver la versión semática  */
-
-body {
-    color: white;
+/* Diseño de desktop a mobile */ 
+* {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    color: white;
     font-family: 'Indie Flower', cursive;
     font-size: 2em;
-    margin-top: 0;
-    /* padding: .5em 1em;*/
-}
-
-/* Diseño básico como mobile a resolución de laptop */ 
-.header-container, .main-container, .section-container { 
-    float: left;
-    margin-bottom: .5em;
-    /* margin-left: .5em;
-    margin-right: .5em; */
-    padding: .5em;
+    font-weight: lighter;
+    margin: 0 auto;
+    min-width: 1000px;
     text-align: center;
+    width: 100%
 }
 
-.main-container{
-    background-color: #34EAA9;
-    height: 20em;
-    width: 98%;   
+.row:before, .row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
-.section-container, .header-container {
-    height: 4em;
-    width: 98%;
+[class*="col-"] {
+    border: 3px solid white;
+    float: left;
+    /*min-height: 17px;*/
+    height: 3.5em;
+    /* glutters*/
+    padding: 12px;
 }
 
-.header-container {
-    background-color: #F7EA00;
+/* Define el ancho de las columnas */
+.col-3 { width: 25%; }
+.col-9 { width: 75%; }
+.col-12 { width: 100%; }
+
+/* Definir los colores */
+.back-aqua { background-color: #34EAA9; }
+.back-yellow { background-color: #F7EA00; }
+.back-purple { background-color: #E486EA; }
+
+/* Define la altura de las secciones */
+.back-aqua, .back-purple {
+    height: 15em;
 }
 
-.section-container {
-    background-color: #E486EA;
-}
+/* Se realiza el ajuste de desktop a mobile */ 
 
-
-/* Se realiza el ajuste de laptop a mayor resolución de pantalla */ 
-@media screen and (min-width: 1200px) and (max-width: 1473px) {
-    
-    .main-container, .section-container {
-        display: inline;
+@media screen and (min-width: 100px) and (max-width: 768px) {
+    .back-aqua, .back-purple {
+        width: 100%;
     }
 
-    .header-container {
-        height: 3em;
-        width: 98%;
-    }
-    
-    .main-container {
-        height: 24em;
-        margin-right: 10px;
-        width: 67%;
-    }
-    
-    .section-container {
-        height: 24em;
-        margin-left: 10px;
-        width: 27%;
+    .back-aqua {
+        height: 16em;
     }
 
+    .back-purple {
+        height: 3.5em;
+    }
 }
