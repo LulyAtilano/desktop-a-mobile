@@ -1,97 +1,94 @@
-/* Estilo css para buscar resolver la versión semática  */
-
-body {
-    color: white;
+/* Diseño de desktop a mobile */ 
+* {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    color: white;
     font-family: 'Indie Flower', cursive;
     font-size: 2em;
-    margin-top: 0;
-    /* padding: .5em 1em;*/
-}
-
-
-/* Se realiza el ajuste de laptop a mayor resolución de pantalla */ 
-.header-container, .main-container, .little-container, .section-container { 
-    float: left;
-    margin-bottom: .5em;
-    /* margin-left: .5em;
-    margin-right: .5em; */
-    padding: .5em;
+    font-weight: lighter;
+    margin: 0 auto;
+    min-width: 1000px;
     text-align: center;
+    width: 100%
 }
 
-.main-container, .little-container {
-    height: 8em;
-    display: block;
+.row:before, .row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
-.header-container {
-    background-color: #F7EA00;
-    width: 99%
-}
-
-.main-container {
-    background-color: #34EAA9;
-    margin-right: 8px;
-    width: 59%;
-}
-
-.section-container {
-    background-color: #E486EA;
-    float: right;
-    height: 17.5em;
-    margin-left: 5px;
-    width: 35%;
-}
-
-.little-container {
-    margin-right: 17px;
+[class*="col-"] {
+    border: 3px solid white;
     float: left;
-    width: 17%
-} 
-
-.orange {
-    background-color: #F7B93C;
+    /*min-height: 17px;*/
+    height: 3.5em;
+    /* glutters*/
+    padding: 12px;
 }
 
-.pink {
-    background-color: #E836B1;
+/* Define el ancho de las columnas */
+.col-1 { width: 8.33%; }
+.col-2 { width: 16.66%; }
+.col-3 { width: 25%; }
+.col-4 { width: 33.33%; }
+.col-5 { width: 41.67%; }
+.col-6 { width: 50%; }
+.col-7 { width: 58.33%; }
+.col-8 { width: 66.67%; }
+.col-9 { width: 75%; }
+.col-10 { width: 83.33%; }
+.col-11 { width: 91.67%; }
+.col-12 { width: 100%; }
+
+/* Definir los colores */
+.back-aqua { background-color: #34EAA9; }
+.back-yellow { background-color: #F7EA00; }
+.back-purple { background-color: #E486EA; }
+.back-blue { background-color: #36B6E8; }
+.back-pink { background-color: #E836B1; }
+.back-orange { background-color: #F7B93C; }
+
+/* Define la altura de las secciones */
+.back-purple {
+    height: 15em;
+    float: right;
 }
 
-.blue {
-    background-color: #36b6e8;
-} 
+.back-aqua  {
+    height: 7.5em;
+}
 
+.back-blue {
+    height: 7.5em;
+    /* display: block; */
+    clear: both;
+}
 
-/* Diseño básico como mobile a resolución de laptop */ 
+.back-orange, .back-pink {
+    height: 7.5em;
+}
 
-@media screen and (min-width: 320px) and (max-width: 1200px) {
-    
-    .header-container, .main-container, .section-container {
-        height: 3em;
-        margin-bottom: 5px;
-        text-align: center;
-        width: 98%;
+/* Se realiza el ajuste de desktop a mobile */ 
+
+@media screen and (min-width: 100px) and (max-width: 768px) {
+    .back-aqua, .back-purple {
+        width: 100%;
     }
 
-    .header-container {
-        background-color: #F7EA00;
-    }
-    
-    .main-container {
-        background-color: #34EAA9;
+    .back-blue, .back-pink, .back-orange {
+        width: 33.33%;
     }
 
-    .section-container {
-        background-color: #E486EA;
-        padding: .5em;
+    .back-aqua {
+        height: 12em;
     }
-    
-    .little-container {
-        height: 3em;
-        display: inline-flex;
-        text-align: center;
-        margin-bottom: 5px;
-        width: 25%;
+
+    .back-purple, .back-blue, .back-pink, .back-orange {
+        height: 3.5em;
     }
 } 
