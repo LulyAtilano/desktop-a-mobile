@@ -1,0 +1,97 @@
+/* Estilo css para buscar resolver la versión semática  */
+
+body {
+    color: white;
+    box-sizing: border-box;
+    font-family: 'Indie Flower', cursive;
+    font-size: 2em;
+    margin-top: 0;
+    /* padding: .5em 1em;*/
+}
+
+
+/* Se realiza el ajuste de laptop a mayor resolución de pantalla */ 
+.header-container, .main-container, .little-container, .section-container { 
+    float: left;
+    margin-bottom: .5em;
+    /* margin-left: .5em;
+    margin-right: .5em; */
+    padding: .5em;
+    text-align: center;
+}
+
+.main-container, .little-container {
+    height: 8em;
+    display: block;
+}
+
+.header-container {
+    background-color: #F7EA00;
+    width: 99%
+}
+
+.main-container {
+    background-color: #34EAA9;
+    margin-right: 8px;
+    width: 59%;
+}
+
+.section-container {
+    background-color: #E486EA;
+    float: right;
+    height: 17.5em;
+    margin-left: 5px;
+    width: 35%;
+}
+
+.little-container {
+    margin-right: 17px;
+    float: left;
+    width: 17%
+} 
+
+.orange {
+    background-color: #F7B93C;
+}
+
+.pink {
+    background-color: #E836B1;
+}
+
+.blue {
+    background-color: #36b6e8;
+} 
+
+
+/* Diseño básico como mobile a resolución de laptop */ 
+
+@media screen and (min-width: 320px) and (max-width: 1200px) {
+    
+    .header-container, .main-container, .section-container {
+        height: 3em;
+        margin-bottom: 5px;
+        text-align: center;
+        width: 98%;
+    }
+
+    .header-container {
+        background-color: #F7EA00;
+    }
+    
+    .main-container {
+        background-color: #34EAA9;
+    }
+
+    .section-container {
+        background-color: #E486EA;
+        padding: .5em;
+    }
+    
+    .little-container {
+        height: 3em;
+        display: inline-flex;
+        text-align: center;
+        margin-bottom: 5px;
+        width: 25%;
+    }
+} 

@@ -1,0 +1,66 @@
+/* Estilo css para buscar resolver la versión semática  */
+
+body {
+    color: white;
+    box-sizing: border-box;
+    font-family: 'Indie Flower', cursive;
+    font-size: 2em;
+    margin-top: 0;
+    /* padding: .5em 1em;*/
+}
+
+/* Diseño básico como mobile a resolución de laptop */ 
+.header-container, .main-container, .section-container { 
+    float: left;
+    margin-bottom: .5em;
+    /* margin-left: .5em;
+    margin-right: .5em; */
+    padding: .5em;
+    text-align: center;
+}
+
+.main-container{
+    background-color: #34EAA9;
+    height: 20em;
+    width: 98%;   
+}
+
+.section-container, .header-container {
+    height: 4em;
+    width: 98%;
+}
+
+.header-container {
+    background-color: #F7EA00;
+}
+
+.section-container {
+    background-color: #E486EA;
+}
+
+
+/* Se realiza el ajuste de laptop a mayor resolución de pantalla */ 
+@media screen and (min-width: 1200px) and (max-width: 1473px) {
+    
+    .main-container, .section-container {
+        display: inline;
+    }
+
+    .header-container {
+        height: 3em;
+        width: 98%;
+    }
+    
+    .main-container {
+        height: 24em;
+        margin-right: 10px;
+        width: 67%;
+    }
+    
+    .section-container {
+        height: 24em;
+        margin-left: 10px;
+        width: 27%;
+    }
+
+}
