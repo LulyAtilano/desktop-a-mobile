@@ -6,18 +6,31 @@
         <title> Version C </title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" media="screen" href="grid.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="main3.css" />
     </head>
     <body>
         <main class="container">
-            <div class="row col-12 back-yellow"> A </div>
-            <div class="row col-3 back-blue"> B </div>
-            <div class="row col-3 back-pink"> C </div>
-            <div class="row col-3 back-orange"> D </div>
-            <div class="row col-3 back-red"> E </div>
-            <div class="row col-3 back-aqua"> F </div>
-            <div class="row col-3 back-green"> G </div>
-            <div class="row col-3 back-purple"> H </div>
+            <section class="row">
+                <div class="col-12 back-yellow"> A </div>
+            </section>
+            <section class="row">
+                <div class="col-9"> 
+                    <div class="row"> 
+                        <div class="col-4 back-blue"> B </div>
+                        <div class="col-4 back-pink"> C </div>
+                        <div class="col-4 back-orange"> D </div>
+                    </div>
+                    <div class="row"> 
+                        <div class="col-4 back-red"> E </div>
+                        <div class="col-4 back-aqua"> F </div>
+                        <div class="col-4 back-green"> G </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="col-12 back-purple"> H </div>
+                </div>
+            </section>
         </main>
     </body>
 </html>

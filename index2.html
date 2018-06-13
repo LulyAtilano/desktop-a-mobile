@@ -6,16 +6,39 @@
         <title> Version B </title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" media="screen" href="grid.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="main2.css" />
     </head>
     <body>
         <main class="container">
-            <div class="row col-12 back-yellow"> A </div>
-            <div class="row col-9 back-aqua"> B </div>
-            <div class="row col-3 back-blue"> C </div>
-            <div class="row col-3 back-pink"> D </div>
-            <div class="row col-3 back-orange"> E </div>
-            <div class="row col-3 back-purple"> F </div>
+            <!-- Fila Superior -->
+            <section class="row"> 
+                <div class="col-12">
+                    <div class="col-12 back-yellow"> A </div>
+                </div>
+            </section>
+            <!-- Fila Inferior -->
+            <section class="row"> 
+                <section class="row">
+                    <!-- Columna de 8 --> 
+                    <div class="col-8">
+                        <!-- Columna de 8 - Superior -->
+                        <section class="row"> 
+                            <div class="col-12 back-aqua"> B </div>
+                        </section>
+                        <!-- Columna de 8 - Inferior (3 divs) -->
+                        <section class="row"> 
+                            <div class="col-4 back-blue"> C </div>
+                            <div class="col-4 back-pink"> D </div>
+                            <div class="col-4 back-orange"> E </div>
+                        </section>
+                    </div>
+                    <!-- Columna de 4 --> 
+                    <div class="col-4">
+                        <div class="col-12 back-purple"> F </div>
+                    </div>
+                </section>
+            </section>
         </main>
     </body>
 </html>
